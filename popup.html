@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes Unitários</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 10px; max-width: 600px; }
+        h1 { font-size: 18px; margin-bottom: 10px; }
+        #results { margin-top: 10px; max-height: 500px; overflow-y: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+        th, td { border: 1px solid #ccc; padding: 5px; text-align: left; font-size: 12px; }
+        .pass { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+        .critical { background-color: #ffe6e6; }
+        .export-buttons { margin: 10px 0; display: flex; gap: 5px; flex-wrap: wrap; }
+        .export-btn { padding: 5px 10px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px; }
+        .export-btn:hover { background: #0056b3; }
+        .export-btn:disabled { background: #6c757d; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <h1>Testes Unitários - Validação de Formulários</h1>
+    <button id="runTests">Executar Testes</button>
+    
+    <div class="export-buttons" id="exportButtons" style="display: none;">
+        <button class="export-btn" id="exportJSON">Exportar JSON</button>
+        <button class="export-btn" id="exportCSV">Exportar CSV</button>
+        <button class="export-btn" id="exportHTML">Exportar HTML</button>
+        <button class="export-btn" id="exportPDF">Exportar PDF</button>
+    </div>
+    
+    <div id="results"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
